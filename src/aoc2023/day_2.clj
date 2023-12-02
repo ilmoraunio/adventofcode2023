@@ -1,4 +1,4 @@
-(ns aoc2023.adventofcode2023-2
+(ns aoc2023.day-2
   (:require [aoc2023.util :as util]))
 
 (defn possible-games

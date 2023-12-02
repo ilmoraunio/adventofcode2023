@@ -1,4 +1,4 @@
-(ns aoc2023.adventofcode2023-1
+(ns aoc2023.day-1
   (:require [aoc2023.util :as util]))
 
 (def nums #{\0 \1 \2 \3 \4 \5 \6 \7 \8 \9})
