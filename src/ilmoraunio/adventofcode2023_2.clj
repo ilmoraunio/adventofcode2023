@@ -4,7 +4,7 @@
 (defn possible-games
   [filename]
   (letfn [(parse [line]
-            (let [id (Integer/valueOf (second (re-find #"Game (\d*)" line)))
+            (let [id (Integer/valueOf (second (re-find #"Game (\d+)" line)))
                   reds (map (comp #(Integer. %) second) (re-seq #"(\d+) red" line))
                   blues (map (comp #(Integer. %) second) (re-seq #"(\d+) blue" line))
                   greens (map (comp #(Integer. %) second) (re-seq #"(\d+) green" line))]
