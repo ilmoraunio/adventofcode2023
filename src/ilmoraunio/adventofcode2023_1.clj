@@ -1,5 +1,5 @@
 (ns ilmoraunio.adventofcode2023-1
-  (:require [clojure.string :as str]))
+  (:require [ilmoraunio.util :as util]))
 
 (def nums #{\0 \1 \2 \3 \4 \5 \6 \7 \8 \9})
 
@@ -22,4 +22,4 @@
        (+ acc (+ (* first-digit 10)
                  last-digit))))
    0
-   (str/split-lines input)))
+   (util/gulp input)))
