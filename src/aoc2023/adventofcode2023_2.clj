@@ -1,5 +1,5 @@
-(ns ilmoraunio.adventofcode2023-2
-  (:require [ilmoraunio.util :as util]))
+(ns aoc2023.adventofcode2023-2
+  (:require [aoc2023.util :as util]))
 
 (defn possible-games
   [filename]
