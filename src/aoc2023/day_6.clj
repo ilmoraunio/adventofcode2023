@@ -2,8 +2,8 @@
   (:require [clojure.string :as str]))
 
 (defn times-and-distances
-  [s]
-  (->> (->> s
+  [filename]
+  (->> (->> (slurp filename)
             (re-seq #"Time:(.*)\nDistance:(.*)")
             first
             ((juxt second #(nth % 2)))
@@ -15,7 +15,7 @@
 
 (defn determine-winning-scenarios
   [filename]
-  (->> (times-and-distances (slurp filename))
+  (->> (times-and-distances filename)
        (map (fn [{:keys [time distance]}]
               (keep (fn [time-held-ms]
                       (let [speed (* time-held-ms 1)
